@@ -1,3 +1,8 @@
-module.exports = async function (context, req) {
-    context.res = {body: {message: "Hello from API."}}
-};
+const cars  = require("../cars.json")   
+
+module.exports = async function cars (context, req){
+    context.log('Getting cars');
+    context.res = {
+        body: cars,
+    }
+}
