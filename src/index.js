@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-const cars = require('./cars.json');
+const cars = require('http');
 
 //get all cars
 app.get('/cars', (req, res) => {
