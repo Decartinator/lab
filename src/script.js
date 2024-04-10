@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carList = document.getElementById('carList');
     cars = [];
     loadCarsBtn.addEventListener('click', () => {
-        fetch('api/cars')
+        fetch('/api/cars')
             .then(response => response.json())
             .then(data => {
                 cars = data;
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 function addCar(newCar) {
-    fetch('http://localhost:3001/cars', {
+    fetch('/api/cars', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
