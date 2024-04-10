@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadCarsBtn = document.getElementById('loadCarsBtn');
     const carList = document.getElementById('carList');
     cars = [];
-    loadCarsBtn.addEventListener('click', () => {
+    loadCarsBtn.addEventListener('click', async () => {
         console.log( fetch('/api/cars'))
-        fetch('/api/cars')
+        await fetch('/api/cars')
             .then(response => response.json())
             .then(data => {
                 cars = data;
